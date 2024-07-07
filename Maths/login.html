@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="box">
+
+        <div class="log">
+            <form id="form">
+
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Name.." id="name">
+
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Enter e-mail">
+            <br>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+
+
+    <style>
+
+        .box{
+
+            justify-content: center;
+        }
+
+        .log{
+
+            width: 70%;
+            padding: 50px;
+            margin: 100px auto;
+            border: solid 1px lightgrey;
+            border-radius: 16px;
+            
+            
+
+        }
+
+        label{
+
+            margin-bottom: 45px;
+            padding: 15px;
+        }
+
+        input{
+
+            padding: 10px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: solid 1px lightgray;
+            margin-right: 20px;
+        }
+
+        #submit{
+
+            padding: 10px 20px;
+            border: solid 1px lightgrey;
+            align-self: center;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 50%;
+        }
+    </style>
+    
+
+    <script>
+
+    let form = document.getElementById('form');
+    let name = document.getElementById('name');
+
+    form.addEventListener('submit' , function(e) {
+
+        e.preventDefault();
+
+        const Fname = name.value;
+
+        localStorage.setItem('name' , Fname);
+
+        window.location.href = "welcome.html";
+
+        
+    })
+    </script>
+</body>
+</html>
